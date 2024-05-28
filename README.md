@@ -1,30 +1,39 @@
-# React + TypeScript + Vite
+# Hệ thống giao diện quản lý dữ liệu PIR (PIR Manager)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Cách cài đặt
 
-Currently, two official plugins are available:
+### Điều kiện tiên quyết
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Có sẵn môi trường NodeJS
 
-## Expanding the ESLint configuration
+### Các bước cài đặt
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Clone repository:
 
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+```shell
+git clone https://github.com/sonnt0201/pirmanager
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+- Mở terminal bên trong thư mục `pirmanager` và chạy
+
+```shell
+node install
+```
+để cài các modules
+
+- Sau khi nodejs cài xong modules, chạy tiếp 
+
+```shell
+npm run dev
+```
+để mở chương trình.
+
+## Chạy thử toàn bộ hệ thống
+
+- Sau khi mở chương trình giao diện ở trên, mở PIR server sẵn có của mình.
+
+- Trên giao diện app `PIR Manager`, kiểm tra xem đã kết nối được server chưa, (sẽ hiện biểu tượng kêt nối thành công).
+
+- Chọn nhóm PIR để điều khiển và quan sát dữ liệu. Với mạch thật thì chọn nhóm "Mạch của Mừng"
+
+- Bắt đầu thử ghi.
