@@ -13,7 +13,7 @@ dist-ssr
 dist-electron
 release
 *.local
-videos/*.webm
+*.webm
 
 # Editor directories and files
 .vscode/*
