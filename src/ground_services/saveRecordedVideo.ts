@@ -13,6 +13,12 @@ export const saveRecordedVideo: IGroundService<VideoInfo, ReturnCode> = {
     
     executer: (_, videoInfo) => {
         var fs = require("fs");
+
+        // create folder if not exist
+        if (!fs.existsSync('./videos')) {
+            fs.mkdirSync('./videos');
+        }
+
         const stream = fs.createWriteStream(`./videos/${videoInfo.name}.webm`);
         const byteArray = new Uint8Array(videoInfo.buffers);
         let offset = 0;
