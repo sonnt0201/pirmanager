@@ -17,7 +17,7 @@ git clone https://github.com/sonnt0201/pirmanager
 - Mở terminal bên trong thư mục `pirmanager` và chạy
 
 ```shell
-node install
+npm install
 ```
 để cài các modules
 
