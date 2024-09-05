@@ -146,34 +146,8 @@ export const PirChart = ({ capturing, serverAddress, pirGroup }: Props) => {
       if (recordIntervalRef.current) clearInterval(recordIntervalRef.current)
       return;
     }
-    recordIntervalRef.current = setInterval(async () => {
-
-      try {
-        var response = await axios.get(`http://${serverAddress}/api/records/latest?group=${pirGroup?.id}&number=6`,)
-
-
-        // console.log(response.data.payload)
-
-        let data = response.data.payload.sort((a: EncodedPirRecord, b: EncodedPirRecord) => (a["timestamp"] - b["timestamp"]));
-
-          
-
-          data = [...data, ]
-
-        setPirRecords(() =>
-          data.map((datum: EncodedPirRecord) => new PirRecord({
-            id: datum["record_id"],
-            pir: datum["pir_id"],
-            time: datum["timestamp"],
-            vols: datum["voltages"],
-          }))
-        )
-
-      } catch (err: any) {
-        console.log(err);
-        // log(LogType.ERROR, "Something went wrong !", err.message)
-      }
-    }, 1000)
+    
+  
 
   }
 
